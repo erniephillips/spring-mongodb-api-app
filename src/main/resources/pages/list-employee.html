@@ -15,7 +15,7 @@
         <td>First Name</td>
         <td>Last Name</td>
         <td>Age</td>
-        <td>....</td>
+        <td>Actions</td>
       </tr>
       <tr th:each="emp : ${employees}">
         <td th:text="${emp.id}"></td>
@@ -23,8 +23,8 @@
         <td th:text="${emp.lastName}"></td>
         <td th:text="${emp.age}"></td>
         <td>
-          <a href="#" th:href="@{/emplyee/edit/{id}(id=${emp.id})}">Edit</a>
-          <a href="#" th:href="@{/emplyee/delete/{id}(id=${emp.id})}">Delete</a>
+          <a href="#" th:href="@{/employee/edit/{id}(id=${emp.id})}">Edit</a>
+          <a href="#" th:href="@{/employee/delete/{id}(id=${emp.id})}">Delete</a>
         </td>
       </tr>
     </table>
