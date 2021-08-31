@@ -9,11 +9,13 @@
   <br>
   <div align="center">
     <h1>Edit Employee</h1>
-    <form th:action="@{/employee/edit/{id} (id=${editEmployee.id})}" th:object="${editEmployee}" method="POST">
+    <form th:action="@{/employee/edit/{id} (id=${editEmployee?.id})}" th:object="${editEmployee}" method="POST">
+      <input type="hidden" name="empId" th:field="*{id}"/>
+      <input type="hidden" name="empId" th:field="*{empId}"/>
       <table>
         <tr>
           <td>Employee Id</td>
-          <td><input type="text" disabled="disabled" name="id" th:field="*{id}"/></td>
+          <td><input type="text" disabled="disabled" name="empId" th:field="*{empId}"/></td>
         </tr>
         <tr>
           <td>First Name</td>
