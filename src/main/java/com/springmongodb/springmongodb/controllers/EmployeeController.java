@@ -25,7 +25,7 @@ public class EmployeeController {
     //put employees in the model object
     List<Employee> employees = employeeRepository.findAll();
     model.addAttribute("employees", employees);
-    return "list-employee";//string must match html file naem
+    return "list-employee";//string must match html file name
   }
 
   
